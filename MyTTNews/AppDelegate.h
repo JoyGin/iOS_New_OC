@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>// UIResponder处理ios事件
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;//属性，用于访问类的外部类的变量属性；通常一个应用只有一个窗口
 
 
 @end

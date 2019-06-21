@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoCommentViewController">
+            <connections>
+                <outlet property="bottomContainerView" destination="uMF-9S-3y7" id="wZF-Qi-ioF"/>
+                <outlet property="bottomSapce" destination="5lK-SQ-eFD" id="hC6-0u-X29"/>
+                <outlet property="commentTextField" destination="vyh-Da-7Z4" id="fMf-lg-0hp"/>
+                <outlet property="tableView" destination="wNw-gb-8wq" id="4DD-ns-BLD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VAU-a0-E7o">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMF-9S-3y7" userLabel="底部工具条">
+                    <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-vW-d0J">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Ddb-cr-Asj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" image="comment-bar-voice">
+                                <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-3z-mpP">
+                            <rect key="frame" x="370" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="0LB-so-oVz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" image="comment_bar_at_icon">
+                                <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-Da-7Z4">
+                            <rect key="frame" x="44" y="5" width="326" height="34"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vyh-Da-7Z4" secondAttribute="bottom" constant="5" id="9pi-VT-n6k"/>
+                        <constraint firstAttribute="bottom" secondItem="VXv-3z-mpP" secondAttribute="bottom" id="CmI-uM-OPm"/>
+                        <constraint firstAttribute="height" constant="44" id="EjX-dk-ke8"/>
+                        <constraint firstAttribute="trailing" secondItem="VXv-3z-mpP" secondAttribute="trailing" id="IoF-7K-hOR"/>
+                        <constraint firstItem="w7h-vW-d0J" firstAttribute="leading" secondItem="uMF-9S-3y7" secondAttribute="leading" id="QPj-h9-w98"/>
+                        <constraint firstItem="vyh-Da-7Z4" firstAttribute="top" secondItem="uMF-9S-3y7" secondAttribute="top" constant="5" id="YJZ-zu-ZKv"/>
+                        <constraint firstItem="vyh-Da-7Z4" firstAttribute="leading" secondItem="w7h-vW-d0J" secondAttribute="trailing" id="Znp-dt-Kir"/>
+                        <constraint firstItem="w7h-vW-d0J" firstAttribute="top" secondItem="uMF-9S-3y7" secondAttribute="top" id="bSc-7n-5qP"/>
+                        <constraint firstAttribute="bottom" secondItem="w7h-vW-d0J" secondAttribute="bottom" id="cq3-1I-2Ha"/>
+                        <constraint firstItem="VXv-3z-mpP" firstAttribute="leading" secondItem="vyh-Da-7Z4" secondAttribute="trailing" id="j52-GH-s1Y"/>
+                        <constraint firstItem="VXv-3z-mpP" firstAttribute="top" secondItem="uMF-9S-3y7" secondAttribute="top" id="u70-m1-foQ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-gb-8wq" userLabel="评论内容">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wNw-gb-8wq" firstAttribute="top" secondItem="VAU-a0-E7o" secondAttribute="top" id="4as-7C-QiM"/>
+                <constraint firstAttribute="bottom" secondItem="uMF-9S-3y7" secondAttribute="bottom" id="5lK-SQ-eFD"/>
+                <constraint firstItem="uMF-9S-3y7" firstAttribute="leading" secondItem="VAU-a0-E7o" secondAttribute="leading" id="EBn-Iv-EEf"/>
+                <constraint firstAttribute="trailing" secondItem="uMF-9S-3y7" secondAttribute="trailing" id="U8e-0x-saV"/>
+                <constraint firstItem="wNw-gb-8wq" firstAttribute="leading" secondItem="VAU-a0-E7o" secondAttribute="leading" id="Yn2-vW-9Id"/>
+                <constraint firstAttribute="trailing" secondItem="wNw-gb-8wq" secondAttribute="trailing" id="axu-OK-f4Y"/>
+                <constraint firstItem="uMF-9S-3y7" firstAttribute="top" secondItem="wNw-gb-8wq" secondAttribute="bottom" id="tF4-t7-9r8"/>
+            </constraints>
+            <point key="canvasLocation" x="-14" y="-72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="comment-bar-voice" width="29" height="29"/>
+        <image name="comment_bar_at_icon" width="27" height="27"/>
+    </resources>
+</document>

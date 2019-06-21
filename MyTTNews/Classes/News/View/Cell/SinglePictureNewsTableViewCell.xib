@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="3lf-wY-cev" userLabel="NormalNewsTableViewCell" customClass="SinglePictureNewsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lf-wY-cev" id="Axm-Xz-IVa">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-to-umG">
+                        <rect key="frame" x="10" y="15" width="74" height="55.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="J2F-to-umG" secondAttribute="height" multiplier="4:3" id="IUH-zI-wYc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR7-ie-fgB">
+                        <rect key="frame" x="279" y="66.5" width="35" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-MB-OFB" userLabel="分割线">
+                        <rect key="frame" x="94" y="84.5" width="220" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="2RE-4A-vGZ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杭州西湖区风景旅游局长被查杭州西湖区风景旅游局长被查" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lm-hC-TKg">
+                        <rect key="frame" x="94" y="15" width="220" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涉嫌违纪；辖区内有西湖、西溪湿地两个国家5A级景区" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2E-XR-1DP">
+                        <rect key="frame" x="94" y="40" width="220" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J2F-to-umG" firstAttribute="leading" secondItem="Axm-Xz-IVa" secondAttribute="leading" constant="10" id="0sV-zk-DqF"/>
+                    <constraint firstItem="w2E-XR-1DP" firstAttribute="top" secondItem="4Lm-hC-TKg" secondAttribute="bottom" constant="5" id="4tZ-db-tr5"/>
+                    <constraint firstItem="w2E-XR-1DP" firstAttribute="leading" secondItem="4Lm-hC-TKg" secondAttribute="leading" id="8XR-33-uga"/>
+                    <constraint firstAttribute="trailing" secondItem="w2E-XR-1DP" secondAttribute="trailing" constant="10" id="BeK-OB-udx"/>
+                    <constraint firstItem="Ui2-MB-OFB" firstAttribute="leading" secondItem="4Lm-hC-TKg" secondAttribute="leading" id="CL8-VM-zzl"/>
+                    <constraint firstItem="4Lm-hC-TKg" firstAttribute="top" secondItem="Axm-Xz-IVa" secondAttribute="top" constant="15" id="Cj3-Tx-ES2"/>
+                    <constraint firstAttribute="trailing" secondItem="Ui2-MB-OFB" secondAttribute="trailing" constant="10" id="GCV-Xu-cLj"/>
+                    <constraint firstAttribute="trailing" secondItem="4Lm-hC-TKg" secondAttribute="trailing" constant="10" id="Iv2-Pb-oLU"/>
+                    <constraint firstAttribute="trailing" secondItem="TR7-ie-fgB" secondAttribute="trailing" constant="10" id="kn7-DN-JRQ"/>
+                    <constraint firstAttribute="bottom" secondItem="J2F-to-umG" secondAttribute="bottom" constant="15" id="q7s-ko-zKw"/>
+                    <constraint firstAttribute="bottom" secondItem="TR7-ie-fgB" secondAttribute="bottom" constant="5" id="tLI-kd-Egj"/>
+                    <constraint firstItem="J2F-to-umG" firstAttribute="top" secondItem="Axm-Xz-IVa" secondAttribute="top" constant="15" id="y37-P1-zn1"/>
+                    <constraint firstItem="4Lm-hC-TKg" firstAttribute="leading" secondItem="J2F-to-umG" secondAttribute="trailing" constant="10" id="yi2-h7-FgO"/>
+                    <constraint firstAttribute="bottom" secondItem="Ui2-MB-OFB" secondAttribute="bottom" id="ytq-xs-ar1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentCount" destination="TR7-ie-fgB" id="vBd-JZ-QZx"/>
+                <outlet property="descLabel" destination="w2E-XR-1DP" id="KBK-DL-iCk"/>
+                <outlet property="newsTittleLabel" destination="4Lm-hC-TKg" id="rIe-LX-tg8"/>
+                <outlet property="pictureImageView" destination="J2F-to-umG" id="uJD-xQ-ldG"/>
+                <outlet property="separatorLine" destination="Ui2-MB-OFB" id="R7W-y8-nY1"/>
+            </connections>
+            <point key="canvasLocation" x="15.199999999999999" y="125.03748125937032"/>
+        </tableViewCell>
+    </objects>
+</document>

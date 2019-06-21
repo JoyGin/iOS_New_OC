@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TTTabBarController.h"
+#import "TTConst.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,45 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSLog(@"ios-AppDelegate-入口");
+    [self setupUserDefaults];
+    // bounds：屏幕的全部区域
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 根视图
+    self.window.rootViewController=[[TTTabBarController alloc] init];//主页入口：根控制器替换
+    // 让uiWindow显示出来（让窗口成为主窗口 并显示出来），一个应用程序只有一个主窗口
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+#pragma mark --private Method--设置preference key-value信息
+-(void)setupUserDefaults{
+    // 设置-》摇一摇夜间：小数据存储 preference文件夹 plist文件。获取值bool
+    BOOL isShakeCanChangeSkin = [[NSUserDefaults standardUserDefaults]
+                                 boolForKey:IsShakeCanChangeSkinKey];
+    if (!isShakeCanChangeSkin) {
+        // 设置key-value NO
+        [[NSUserDefaults standardUserDefaults] setObject:@(NO) forKey:IsShakeCanChangeSkinKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];// 立即写入
+    }
+    
+    BOOL isDownLoadNoImageIn3G = [[NSUserDefaults standardUserDefaults] boolForKey:IsDownLoadNoImageIn3GKey];
+    if (!isDownLoadNoImageIn3G) {
+        [[NSUserDefaults standardUserDefaults] setObject:@(NO) forKey:IsDownLoadNoImageIn3GKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    NSString *userName = [[NSUserDefaults standardUserDefaults] stringForKey:UserNameKey];
+    if (userName==nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"TTNews" forKey:UserNameKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    NSString *userSignature = [[NSUserDefaults standardUserDefaults] stringForKey:UserSignatureKey];
+    if (userSignature==nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"这个家伙很懒,什么也没有留下" forKey:UserSignatureKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 
